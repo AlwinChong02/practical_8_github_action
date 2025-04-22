@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                powershell 'java -jar build/libs/hello-world-java.jar'
+                powershell 'java -jar build/libs/hello-world-java-1.0.jar'
             }
         }
     }
