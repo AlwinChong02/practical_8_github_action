@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/bukharyi/practical_8_github_action.git'
+                git branch: 'master', url: 'https://github.com/AlwinChong02/practical_8_github_action.git'
             }
         }
         stage('Build') {
