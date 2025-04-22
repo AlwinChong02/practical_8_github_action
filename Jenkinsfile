@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 def jarFile = bat(script: 'dir /b build\\libs\\*.jar', returnStdout: true).trim()
-                powershell "java -jar build/libs/${jarFile}"
+                powershell "java -jar build/libs/${jarFile}.jar"
             }
         }
     }
