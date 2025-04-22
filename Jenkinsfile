@@ -8,16 +8,16 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'start gradlew build'
+                //bat 'start gradlew build'
                 //bat 'gradle build'
-                //powershell 'gradlew build'
+                powershell 'gradlew build'
             }
         }
         stage('Test') {
             steps {
-                bat 'start gradlew test'
+                //bat 'start gradlew test'
                 //bat 'gradle test'
-                //powershell 'gradle test'
+                powershell 'gradle test'
             }
         }
         stage('Deploy') {
