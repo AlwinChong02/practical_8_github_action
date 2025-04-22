@@ -22,7 +22,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                powershell 'java -jar build/libs/hello-world-java-1.0.jar'
+                def jarFile = bat(script: 'dir /b build\\libs\\*.jar', returnStdout: true).trim()
+                powershell "java -jar build/libs/${jarFile}"
             }
         }
     }
