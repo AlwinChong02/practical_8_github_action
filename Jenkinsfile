@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'java -jar build/libs/hello-world-java-V1.jar'
+                bat 'java -jar build/libs/hello-world-java-V1.0.jar'
             }
         }
     }
